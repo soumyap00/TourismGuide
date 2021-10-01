@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            IndiaTourism
+        </title>
+        <link rel="stylesheet" type="text/css" href="css/feedback.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <script>
+            function valid(){
+                var tel = document.getElementById("tel").value;
+                var regx = /^[6-9][0-9]{9}$/;
+                var pass = document.getElementById("pass").value;
+                var cpass = document.getElementById("cpass").value;
+                var regx1 = /[a-zA-Z0-9\.-+*-@!#$%&]/;
+                if(regx.test(tel) != true){
+                    alert("Wrong mobile number.")
+                    return false;
+                }
+                else if(pass != cpass){
+                    alert("Password Mismatch");
+                    return false;
+                }  
+                else if(regx1.test(pass) != true){
+                    alert("Password must contains a number, capital letter, Small Letter, Symbol")
+                    return false;
+                }
+                else 
+                    return true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>INCREDIBLE INDIA!</h1>
+                </div>
+                <div class="menu">
+                    <a href="index.html">HOME</a>
+                </div>
+            </nav>
+            <main>
+                <section>
+                    <h1>SUBMIT YOUR FEEDBACK</h1>
+                    <form id="feed_form" method="POST" action="feed.php" onsubmit="return valid()">
+                        <table style="font-size: 20px;color: whitesmoke;font-weight: bolder;">
+                            <tr><td>Name</td><td><input class="in" id="name" name="name" type="text" placeholder="Enter your Name" required></td></tr>
+                            <tr><td>Email</td><td><input class="in" id="email" name="email" type="email" placeholder="Like abc@gmail.com" required></td></tr>
+                            <tr><td>Place</td><td><input class="in" id="place" name="place" type="text" placeholder="Enter Destination" required></td></tr>
+                            <tr><td>Feedback</td><td><textarea class="in" id="feed" name="feed" rows="8" placeholder="Enter Your FeedBack Here (max. 255 characters)" required></textarea></td></tr>
+                            <tr><td><br></td></tr>
+                            <tr><td> </td><td><button class="btn" value="reset"> Reset </button> <button class="btn" style="float: right;" value="submit" onclick="validate();"> Submit </button></td></tr> 
+                        </table>      
+                    </form>
+                </section>
+            </main>
+        </header>
+    </body>
+</html>

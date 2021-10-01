@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    width: 100%; height: 100vh;
+    background: black;
+    background-repeat: repeat;
+}
+
+body{
+    background: black;
+}
+
+nav{
+    width: 100%; height: 15vh;
+    /* background: grey; */
+    /* color: white; */
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+    width: 25%;
+    text-align: center;
+    color: wheat;
+}
+
+nav .menu{
+    width: 25%;
+    display: flex; justify-content: space-around;
+}
+
+nav .menu a{
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav .menu a:hover{
+    color: #00b894;
+}
+
+.container-1{
+    display: flex;
+}
+
+.one{
+    flex:1;
+    padding-left: 35px;
+}
+
+.two{
+    flex:2;
+    padding-left: 35px;
+}
+
+.three{
+    flex:1;
+    padding-left: 35px;
+}
+
+p{
+    color: white;
+    font-style: underline;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.title{
+    padding-left: 50px; padding-top: 25px; padding-bottom: 25px;
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: violet;
+}
+
+img{
+    height: 200px;
+    width: 350px;
+}
+
+li{
+    color: blanchedalmond;
+    padding-bottom: 4px;
+}
+
+.container-2{
+    display: flex;
+    padding-top: 20px;
+}
+
+.yatri{
+    flex:1
+}
+
+.guide{
+    flex: 1;
+}
+
+.two td{
+    padding-left: 25px;
+    padding-bottom: 3px;
+    color: blanchedalmond;
+    font-size: 15px;
+}
+
+.yatri{
+    padding-left: 35px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(247, 234, 212);
+    height: 25px;
+    width: 200px;
+    color: black;
+    font-weight: bolder;
+    font-size: 15px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
